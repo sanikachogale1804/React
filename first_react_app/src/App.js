@@ -8,10 +8,13 @@ import Employee from './Components/Employee';
 import Product from './Components/Product';
 import Demo from './Components/Demo';
 import MyName from './Components/MyName';
+import ChangeName from './Components/ChangeName';
+
 
 function App() {
   return (
     <div className="App">
+      <ChangeName/>
         <h1>Hello</h1>
         {/* <Header/>
         <Footer/> */}
@@ -24,8 +27,9 @@ function App() {
         {/* <Employee id={201} name={"Siddhesh"}/> */}
         <Product name={"Mobile"} price={50000}/>
         {/* mount matlab web page pe aayega */}
-        <Demo/>
+        <Demo message="Happy New Year" year="2025" />
         <MyName/> 
+        
 
     </div>
   );

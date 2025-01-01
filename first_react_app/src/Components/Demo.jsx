@@ -11,6 +11,8 @@ class Demo extends React.Component
      return(
         <div>
             <h1>Class Based Component</h1>
+            <p>{this.props.message}</p>
+            <p>{this.props.year}</p>
         </div>
      );
    }
