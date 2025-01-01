@@ -6,6 +6,7 @@ import Name from './Components/Name';
 import Student from './Components/Student';
 import Employee from './Components/Employee';
 import Product from './Components/Product';
+import Demo from './Components/Demo';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
 
         {/* <Employee id={201} name={"Siddhesh"}/> */}
         <Product name={"Mobile"} price={50000}/>
+        {/* mount matlab web page pe aayega */}
+        <Demo/>
 
     </div>
   );
