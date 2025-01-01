@@ -5,6 +5,7 @@ import Footer from './Components/Footer';
 import Name from './Components/Name';
 import Student from './Components/Student';
 import Employee from './Components/Employee';
+import Product from './Components/Product';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
         <Student id={101} name="Nikita"/>
         <Student id={102} name="Ankita"/>
 
-        <Employee id={201} name={"Siddhesh"}/>
+        {/* <Employee id={201} name={"Siddhesh"}/> */}
+        <Product name={"Mobile"} price={50000}/>
+
     </div>
   );
 }
