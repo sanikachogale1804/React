@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <ChangeName/>
-        <h1>Hello</h1>
+        {/* <h1>Hello</h1> */}
         {/* <Header/>
         <Footer/> */}
         <Name/>
