@@ -10,6 +10,7 @@ import Demo from './Components/Demo';
 import MyName from './Components/MyName';
 import ChangeName from './Components/ChangeName';
 import Counter from './Components/Counter';
+import EvenOdd from './Components/EvenOdd';
 
 function App() {
   return (
