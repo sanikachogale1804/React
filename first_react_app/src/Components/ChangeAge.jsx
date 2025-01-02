@@ -4,3 +4,5 @@ function ChangeAge()
         <p>25</p>
     );
 }
+
+export default ChangeAge;
