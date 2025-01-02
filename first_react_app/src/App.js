@@ -11,6 +11,8 @@ import MyName from './Components/MyName';
 import ChangeName from './Components/ChangeName';
 import Counter from './Components/Counter';
 import EvenOdd from './Components/EvenOdd';
+import DisplayName from './Components/DisplayName';
+
 
 function App() {
   return (

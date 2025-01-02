@@ -14,7 +14,7 @@ function EvenOdd()
            setAnswer("Odd")
       
         // console.log("EvenOdd")
-    },[inputValue])
+    },[inputValue])//jab jab input value change hogi tab tab useEffect call hora hhai
     return(
         <div>
              {/* js ka event hai onchange matlab input ki value change kardi */}
