@@ -5,7 +5,10 @@ function ChangeAge()
 {
     let[age,setAge]=useState("30")
     return(
-        <p>{age}</p>
+       <div>
+         <h1 onClick={ChangeAge}>{age}</h1>
+         <p>{age}</p>
+       </div>
     );
 }
 
