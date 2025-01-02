@@ -1,7 +1,9 @@
 function ChangeName()
 {
     return(
-
+        <div>
+            <p>Sanika</p>
+        </div>
     );
 }
 
