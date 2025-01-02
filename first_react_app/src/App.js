@@ -9,11 +9,12 @@ import Product from './Components/Product';
 import Demo from './Components/Demo';
 import MyName from './Components/MyName';
 import ChangeName from './Components/ChangeName';
-
+import Counter from './Components/Counter';
 
 function App() {
   return (
     <div className="App">
+      <Counter/>
       <ChangeName/>
         {/* <h1>Hello</h1> */}
         {/* <Header/>
@@ -30,7 +31,6 @@ function App() {
         <Demo message="Happy New Year" year="2025" />
         <MyName/> 
         
-
     </div>
   );
 }
