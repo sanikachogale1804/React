@@ -12,11 +12,12 @@ import ChangeName from './Components/ChangeName';
 import Counter from './Components/Counter';
 import EvenOdd from './Components/EvenOdd';
 import DisplayName from './Components/DisplayName';
-
+import ChangeAge from './Components/ChangeAge';
 
 function App() {
   return (
     <div className="App">
+      <ChangeAge/>
       <DisplayName/>
       <EvenOdd/>
       <Counter/>
