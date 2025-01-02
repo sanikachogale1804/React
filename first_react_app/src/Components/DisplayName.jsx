@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 function DisplayName()
 {
     let[name,setName]= useState("Nisha")
-    let[length,setLength]=useState("length")
-    let[breadth,setBreadth]=useState("breadeth")
+    let[length,setLength]=useState(0)
+    let[breadth,setBreadth]=useState(0)
     let[ans,area]=useState("Area")
 
     useEffect(()=>{
         let l=parseInt(length);
         let w=parseInt(breadth);
+        let a=parseInt(ans);
 
     },[])
     return(
