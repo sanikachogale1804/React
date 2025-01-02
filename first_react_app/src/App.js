@@ -15,6 +15,7 @@ import EvenOdd from './Components/EvenOdd';
 function App() {
   return (
     <div className="App">
+      <EvenOdd/>
       <Counter/>
       <ChangeName/>
         {/* <h1>Hello</h1> */}
