@@ -8,9 +8,11 @@ function LoggedIn()
         {loggedIn?
          <div>
             <h1>Welcom User</h1>
-            <button>LogOut</button>
+            <button onClick={()=>{
+               setLoggedIn(false)
+            }} >LogOut</button>
          </div>:
-         
+
         <button onClick={()=>{
             setLoggedIn(true);
         }}>Log IN</button>}
