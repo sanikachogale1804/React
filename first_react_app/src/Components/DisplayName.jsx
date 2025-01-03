@@ -15,9 +15,11 @@ function DisplayName()
         },5000)
         // console.log(value)
 
-        //cleanup function 
+        //cleanup function: return()=>{} 
         return()=>{
           console.log("cleanup function")
+          // clearTimeout(value); pichle vale timer ko clear kar diya 
+          clearTimeout(value);
         }
     },[length,breadth])
     return(
