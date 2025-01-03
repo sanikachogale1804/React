@@ -9,6 +9,9 @@ function DisplayName()
 
     useEffect(()=>{
         setArea(length*breadth);
+        setTimeout(()=>{
+          console.log("hello")
+        },5000)
     },[length,breadth])
     return(
       <div>
