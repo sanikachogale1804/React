@@ -6,7 +6,10 @@ function LoggedIn()
     return(
        <div>
         {loggedIn?
-        <h1>Welcome user</h1>:
+         <div>
+            <h1>Welcom User</h1>
+            <button>LogOut</button>
+         </div>:
         <button onClick={()=>{
             setLoggedIn(true);
         }}>Log IN</button>}
