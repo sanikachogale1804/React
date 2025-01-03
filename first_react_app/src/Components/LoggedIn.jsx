@@ -1,7 +1,12 @@
+import { useState } from "react";
+
 function LoggedIn()
 {
+    let[loggedIn,setLoggedIn]=useState("false")
     return(
-       <div>LoggedIn</div>
+       <div>
+
+       </div>
     );
 }
 
