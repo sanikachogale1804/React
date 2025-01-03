@@ -5,6 +5,13 @@ function LoggedIn()
     let[loggedIn,setLoggedIn]=useState(false)
     return(
        <div>
+ 
+        {/* react me alag tarah se and operator work karta hai    */}
+        {/* agar true hai to hi kuch dhikhega false hai to nahi dhikhega */}
+        {true && <h1>Condition is true</h1>}
+
+        <hr />
+
         {loggedIn?
          <div>
             <h1>Welcom User</h1>
