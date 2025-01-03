@@ -1,7 +1,7 @@
 function LoggedIn()
 {
     return(
-
+       <div>LoggedIn</div>
     );
 }
 
