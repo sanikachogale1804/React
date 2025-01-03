@@ -10,6 +10,7 @@ function LoggedIn()
             <h1>Welcom User</h1>
             <button>LogOut</button>
          </div>:
+         
         <button onClick={()=>{
             setLoggedIn(true);
         }}>Log IN</button>}
