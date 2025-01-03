@@ -8,10 +8,12 @@ function DisplayName()
     let[area,setArea]=useState(length*breadth)
 
     useEffect(()=>{
-        setArea(length*breadth);
-        setTimeout(()=>{
-          console.log("hello")
+      // setTimeout kuch na kuch value return karta hai usko variable me store kiya
+      //hamesha kuch na kuch value deta rehta hai hume usko band karna padta hai
+        let value=setTimeout(()=>{
+          setArea(length*breadth);
         },5000)
+        console.log(value)
     },[length,breadth])
     return(
       <div>
