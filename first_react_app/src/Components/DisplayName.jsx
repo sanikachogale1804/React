@@ -13,7 +13,12 @@ function DisplayName()
         let value=setTimeout(()=>{
           setArea(length*breadth);
         },5000)
-        console.log(value)
+        // console.log(value)
+
+        //cleanup function 
+        return()=>{
+          console.log("cleanup function")
+        }
     },[length,breadth])
     return(
       <div>
