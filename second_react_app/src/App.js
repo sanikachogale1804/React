@@ -4,6 +4,8 @@ import ChangeName from './Components/ChangeName';
 import AreaOfRectangle from './Components/AreaOfRectangle';
 import Header from './Components/Header';
 import ChangeYear from './Components/ChangeYear';
+import EvenOdd from './Components/EvenOdd';
+
 
 function App() {
   return (
