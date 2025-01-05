@@ -6,7 +6,7 @@ function AreaOfCircle()
     let[ans,setArea]=useState(3.14*radius);
     useEffect(()=>{
         setArea(3.14*radius);
-    },[])
+    },[radius])
     return(
         <div>
             <input type="number" value={radius} onChange={(e)=>{setRadius(e.target.value)}}/>
