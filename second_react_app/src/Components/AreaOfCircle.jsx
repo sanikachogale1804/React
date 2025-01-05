@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function AreaOfCircle()
 {
     let[radius,setRadius]=useState(2);
     let[ans,setArea]=useState(3.14*radius);
+    useEffect(()=>{
+        
+    },[])
     return(
         <div>
-            <input type="number" value={radius} onChange={()=>{setRadius(e.target.value)}}/>
+            <input type="number" value={radius} onChange={(e)=>{setRadius(e.target.value)}}/>
         </div>
     );
 }
