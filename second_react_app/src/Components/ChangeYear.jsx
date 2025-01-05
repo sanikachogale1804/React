@@ -2,10 +2,13 @@ import { useState } from "react";
 
 function ChangeYear(){
 
-    let[year,changeYear]=useState(2025)
+    let[year,setYear]=useState(2025)
+    const changeyear=()=>{
+        setYear(2026)
+    }
     return(
         <div>
-            <h1>{changeYear}</h1>
+            <h1 onClick={changeyear}>{year}</h1>
         </div>
     );
 }
