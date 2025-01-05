@@ -10,6 +10,7 @@ import EvenOdd from './Components/EvenOdd';
 function App() {
   return (
     <div className="App">
+      <EvenOdd/>
       <ChangeYear/>
       <Header/>
       <ChangeName/>
