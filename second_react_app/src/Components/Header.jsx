@@ -1,10 +1,11 @@
+import { useState } from "react";
+
 function Header()
 {
-    let counter="riya"
-    let id=101
+    let[name,ChangeName]=useState("riya")
     return(
        <div>
-        <h1>{counter}{id}</h1>
+           
        </div>
     );
 }
