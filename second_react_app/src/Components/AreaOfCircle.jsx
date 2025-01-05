@@ -5,7 +5,7 @@ function AreaOfCircle()
     let[radius,setRadius]=useState(2);
     let[ans,setArea]=useState(3.14*radius);
     useEffect(()=>{
-        
+        setArea(3.14*radius);
     },[])
     return(
         <div>
