@@ -1,12 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
-import {createBrowserRouter} from 'react-router-dom';
+import {createBrowserRouter,RouterProvider} from 'react-router-dom';
+import About from './Components/About';
+
+//is function me jo bhi hai usko hum variable me store karte hai
+const router=createBrowserRouter([
+  {
+    path:"/about",   //tume jo url chahiye vo lhikh sakte hai
+    element:<About/>
+  }
+])
 
 function App() {
   return (
     <div >
       {/* <Navbar/> */}
+
+      {/* without this we can not work */}
+      <RouterProvider router={router}/>   
     </div>
   );
 }
