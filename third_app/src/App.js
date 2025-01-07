@@ -23,6 +23,7 @@ const router=createBrowserRouter([
     element:<>
         <Navbar/>
         <Footer/>
+        
     </>
   },
   {
