@@ -10,15 +10,11 @@ import Footer from './Components/Footer';
 const router=createBrowserRouter([
   {
     path:"/about",   //tume jo url chahiye vo lhikh sakte hai
-    element:<About/>
+    element:<> <Navbar/> <About/> <Footer/></>
   },
   {
     path:"/contact",
-    element:<Contact/>
-  },
-  {
-    path:"/footer",
-    element:<Footer/>
+    element:<><Navbar/> <Contact/> <Footer/></>
   }, 
   {
     //  "" matlab home page
@@ -28,6 +24,7 @@ const router=createBrowserRouter([
         <Footer/>
     </>
   }
+  // "*" matlab all web pages
     
 ])
 
