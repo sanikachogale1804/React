@@ -19,7 +19,16 @@ const router=createBrowserRouter([
   {
     path:"/footer",
     element:<Footer/>
+  }, 
+  {
+    //  "" matlab home page
+    path:"",
+    element:<>
+        <Navbar/>
+        <Footer/>
+    </>
   }
+    
 ])
 
 
