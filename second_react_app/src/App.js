@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <AreaOfCircle/>
-      <EvenOdd/>
+      {/* <EvenOdd/>
       <ChangeYear/>
-      <Header/>
+      <Header/> */}
       <ChangeName/>
       <AreaOfRectangle/>   
     </div>
