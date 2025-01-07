@@ -15,6 +15,13 @@ import DisplayName from './Components/DisplayName';
 import ChangeAge from './Components/ChangeAge';
 import LoggedIn from './Components/LoggedIn';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import About from './Components/About';
+
+const router=createBrowserRouter([],{
+     path:"/about",
+     element:<About/>
+})
+
 
 function App() {
   return (
