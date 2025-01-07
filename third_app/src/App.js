@@ -5,6 +5,7 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import NotFound from './Components/NotFound';
 
 //is function me jo bhi hai usko hum variable me store karte hai
 const router=createBrowserRouter([
@@ -23,9 +24,13 @@ const router=createBrowserRouter([
         <Navbar/>
         <Footer/>
     </>
-  }
-  // "*" matlab all web pages
-    
+  },
+  {
+    // "*" matlab all web pages
+    //jo route banaya nahi hai vo sab "*" me aaynge
+    path:"*",
+    element:<NotFound/>
+  }  
 ])
 
 
