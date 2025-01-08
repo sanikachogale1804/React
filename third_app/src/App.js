@@ -6,6 +6,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import NotFound from './Components/NotFound';
+import Courses from './Components/Courses';
 
 //is function me jo bhi hai usko hum variable me store karte hai
 const router=createBrowserRouter([
@@ -31,7 +32,11 @@ const router=createBrowserRouter([
     //jo route banaya nahi hai vo sab "*" me aaynge
     path:"*",
     element:<NotFound/>
-  }  
+  }  ,
+  {
+    path:"/courses",
+  element:<><Navbar/> <Courses/> <Footer/></>
+  }
 ])
 
 
@@ -42,6 +47,7 @@ function App() {
 
       {/* without this we can not work */}
       <RouterProvider router={router}/>   
+      
     </div>
   );
 }
