@@ -14,7 +14,7 @@ const router=createBrowserRouter([
     element:<> <Navbar/> <About/> <Footer/></>
   },
   {
-    path:"/contact",
+    path:"/contact/:id",
     element:<><Navbar/> <Contact/> <Footer/></>
   }, 
   {
