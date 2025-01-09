@@ -5,6 +5,7 @@ import Contact from './Components/Contact';
 import Courses from './Components/Courses';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 
 const router=createBrowserRouter([
@@ -23,7 +24,10 @@ const router=createBrowserRouter([
     {
       path:"/",
       element:<Navbar/>
-    }
+    },
+   { path:"/footer",
+    element:<Footer/>
+   }
 ])
 
 function App() {
