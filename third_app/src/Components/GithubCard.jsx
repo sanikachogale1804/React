@@ -4,7 +4,11 @@ function GithubCard() {
     useEffect(()=>{
 
         fetch("https://api.github.com/users/sanikachogale1804")
-        .
+        .then(data=>data.json())  //json again return promise ka object
+        .then(data=>
+            {
+                console.log(data);
+             })
 
     },[])
     return (
