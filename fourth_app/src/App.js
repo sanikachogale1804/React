@@ -6,7 +6,7 @@ import Courses from './Components/Courses';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-
+import NotFound from './Components/NotFound';
 
 const router=createBrowserRouter([
     {
@@ -27,6 +27,10 @@ const router=createBrowserRouter([
     },
    { path:"/footer",
     element:<Footer/>
+   },
+   {
+    path:"*",
+    element:<NotFound/>
    }
 ])
 
