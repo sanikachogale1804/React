@@ -4,11 +4,13 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import Contact from './Components/Contact';
 import Courses from './Components/Courses';
 import About from './Components/About';
+import Navbar from './Components/Navbar';
+
 
 const router=createBrowserRouter([
     {
       path:"/contact/:id",
-      element:<Contact/>
+      element:<> <Navbar/> <Contact/> </>
     },
     {
       path:"/courses",
@@ -17,14 +19,18 @@ const router=createBrowserRouter([
     {
       path:"/about",
       element:<About/>
+    },
+    {
+      path:"/",
+      element:<Navbar/>
     }
 ])
 
 function App() {
   return (
     <div className="App">
-       <About/>
-       <Contact/>
+       
+       <RouterProvider router={router}/>
     </div>
   );
 }

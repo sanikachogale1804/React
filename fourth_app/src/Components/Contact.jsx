@@ -9,7 +9,7 @@ function Contact() {
     <div>
         <p>Contact</p>
         <p>Id: fetch from route {id}</p>
-        <button onClick={()=>{navigate("/")}}>click here</button>
+        <button onClick={()=>{ navigate("/") }}>click here</button>
     </div>
   )
 }
