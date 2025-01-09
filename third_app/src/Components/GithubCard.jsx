@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function GithubCard() {
+    let [githubData,setGithubData]= useState({});
     useEffect(()=>{
 
         fetch("https://api.github.com/users/sanikachogale1804")
         .then(data=>data.json())  //json again return promise ka object
         .then(data=>
             {
-                console.log(data);
+                console.log(data["id"]);
+                setGithubData(data);
+                console.log(githubData)
              })
 
     },[])
