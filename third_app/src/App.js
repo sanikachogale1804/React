@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import NotFound from './Components/NotFound';
 import Courses from './Components/Courses';
 import CourseItem from './Components/CourseItem';
+import GithubCard from './Components/GithubCard';
 
 //is function me jo bhi hai usko hum variable me store karte hai
 const router=createBrowserRouter([
@@ -39,6 +40,10 @@ const router=createBrowserRouter([
   element:<><Navbar/> <Courses/> <Footer/></>,
   children:[
     {
+      index:true,
+      element:<CourseItem id={1} name={"web-designing"} fees={20000}/>
+    },
+    {
       path:"web-designing",
       element:<CourseItem id={1} name={"web-designing"} fees={20000}/>
     },
@@ -50,7 +55,12 @@ const router=createBrowserRouter([
     path:"Java",
     element:<CourseItem id={3} name={"Java"} fees={35000}/>
   }]
+  },
+  {
+    path:"/github-card",
+    element:<GithubCard/>
   }
+
 ])
 
 
