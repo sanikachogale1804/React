@@ -45,7 +45,11 @@ const router=createBrowserRouter([
     {
       path:"SQL",
       element:<CourseItem id={2} name={"SQL"} fees={30000}/>
-    }]
+    },
+    {
+    path:"Java",
+    element:<CourseItem id={3} name={"Java"} fees={35000}/>
+  }]
   }
 ])
 
