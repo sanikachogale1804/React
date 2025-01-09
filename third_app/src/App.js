@@ -33,7 +33,7 @@ const router=createBrowserRouter([
     //jo route banaya nahi hai vo sab "*" me aaynge
     path:"*",
     element:<NotFound/>
-  }  ,
+  },
   {
     path:"/courses",
   element:<><Navbar/> <Courses/> <Footer/></>,
