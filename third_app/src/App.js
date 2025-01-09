@@ -7,6 +7,7 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import NotFound from './Components/NotFound';
 import Courses from './Components/Courses';
+import CourseItem from './Components/CourseItem';
 
 //is function me jo bhi hai usko hum variable me store karte hai
 const router=createBrowserRouter([
@@ -35,7 +36,16 @@ const router=createBrowserRouter([
   }  ,
   {
     path:"/courses",
-  element:<><Navbar/> <Courses/> <Footer/></>
+  element:<><Navbar/> <Courses/> <Footer/></>,
+  children:[
+    {
+      path:"web-designing",
+      element:<CourseItem id={1} name={"web-designing"} fees={20000}/>
+    },
+    {
+      path:"SQL",
+      element:<CourseItem id={2} name={"SQL"} fees={30000}/>
+    }]
   }
 ])
 
