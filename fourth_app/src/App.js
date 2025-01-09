@@ -19,7 +19,7 @@ const router=createBrowserRouter([
     },
     {
       path:"/about",
-      element:<About/>
+      element:<><Navbar/><About/><Footer/></>
     },
     {
       path:"/",
