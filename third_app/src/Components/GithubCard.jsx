@@ -8,9 +8,9 @@ function GithubCard() {
         .then(data=>data.json())  //json again return promise ka object
         .then(data=>
             {
-                console.log(data["id"]);
+                console.log(data);
                 setGithubData(data);
-                console.log(githubData)
+                //console.log(githubData)
              })
 
     },[])
@@ -18,11 +18,12 @@ function GithubCard() {
         <div>
             <h1>GitHub Profile</h1>
             <div className="card github-card" >
-                <img src="..." className="card-img-top" alt="..." />
+                <img src={githubData.avatar_url} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text"></p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                   
+                    <p className="card-text">Name: {githubData.name}</p>
+                    <p className="card-text">Login: {githubData.login}</p>
+                    
                 </div>
             </div>
         </div>
