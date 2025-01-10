@@ -23,7 +23,7 @@ function GithubCard() {
                    
                     <p className="card-text">Name: {githubData.name}</p>
                     <p className="card-text">Login: {githubData.login}</p>
-                    
+                    <a href={githubData.html_url}>Click to visit profile</a>
                 </div>
             </div>
         </div>
