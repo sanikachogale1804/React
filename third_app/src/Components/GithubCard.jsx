@@ -3,6 +3,11 @@ import React, { useEffect, useState } from 'react'
 function GithubCard() {
     let [githubData, setGithubData] = useState({});
     let [repositories, setrepositories] = useState([])
+    let [searchQuery,setSearchQuery] = useState("")
+
+    const handleChange=(event)=>{
+        setSearchQuery(event.target.value);
+    }
     useEffect(() => {
 
         fetch("https://api.github.com/users/sanikachogale1804")
@@ -16,7 +21,6 @@ function GithubCard() {
                     .then(repos => {
                         //console.log("Repos "+repos)
                         setrepositories(repos)//whatever repos i fetched that saved setrepositories 
-
                     })
             })
 
@@ -36,6 +40,11 @@ function GithubCard() {
             </div>
             {/* Profile:end */}
 
+             {/* Search  */}
+            <input type="text" onChange={handleChange}/>
+
+            
+
             {/* Repositories:start */}
 
             <table class="table">
@@ -47,11 +56,19 @@ function GithubCard() {
                 </thead>
                 <tbody>
                 {/* we are gonna write js code */}
-                    { repositories.map((repoobj)=>{
+                
+                    { repositories.filter((repoobj)=>{
+                        // icludes returns true and false and filter also returns true and false
+                        // pehle filter hoga and then mapping hoga
+                        // includes check karega letter present hai ki nahi
+                        return repoobj.name.toLowerCase()
+                        .includes(searchQuery.toLowerCase());
+                    })
+                    .map((repoobj)=>{
                         return (
                             <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>  
+                            <th scope="row">{repoobj.name}</th>
+                            <td><a href={repoobj.html_url}>Visit Repo</a></td>  
                         </tr>
                         )
                     })};

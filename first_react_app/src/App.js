@@ -16,38 +16,34 @@ import ChangeAge from './Components/ChangeAge';
 import LoggedIn from './Components/LoggedIn';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import About from './Components/About';
-
-const router=createBrowserRouter([],{
-     path:"/about",
-     element:<About/>
-})
+import HelloWorld from './Components/HelloWorld';
 
 
 function App() {
   return (
     <div className="App">
-      <About/>
+      {/* <About/>
       <LoggedIn/>
       <ChangeAge/>
       <DisplayName/>
       <EvenOdd/>
       <Counter/>
       <ChangeName/>
+      {/* <HelloWorld/> */}
         {/* <h1>Hello</h1> */}
         {/* <Header/>
         <Footer/> */}
-        <Name/>
+        {/* <Name/> */}
         {/* my Components has been renderd two times here  */}
         {/* we are reusing Components */}
-        <Student id={101} name="Nikita"/>
-        <Student id={102} name="Ankita"/>
+        {/* <Student id={101} name="Nikita"/> */}
+        {/* <Student id={102} name="Ankita"/> */}
 
         {/* <Employee id={201} name={"Siddhesh"}/> */}
-        <Product name={"Mobile"} price={50000}/>
+        {/* <Product name={"Mobile"} price={50000}/> */}
         {/* mount matlab web page pe aayega */}
-        <Demo message="Happy New Year" year="2025" />
-        <MyName/> 
-        
+        {/* <Demo message="Happy New Year" year="2025" /> */  }
+        <HelloWorld/>
     </div>
   );
 }

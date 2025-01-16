@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 // this function used to create routes
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Product from './Components/Products/Product';
-import Navbar from './Components/Products/Navbar';
+import Product from './Components/Product/Product';
+import Navbar from './Components/Product/Navbar';
 
 
 //creating routs
