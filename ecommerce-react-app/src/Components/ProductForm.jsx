@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { addProduct } from '../Services/ProductService'
 import { data } from 'react-router-dom'
 
 //onAddProduct prop hai and runtime pe call hoga
-function ProductForm({onAddProduct} ) {
+//selectedProduct product.jsx se milega
+function ProductForm({onAddProduct,selectedProduct} ) {
     //function to be called when form will be submited
 
+    //hum object banare hai jo postman me hai(ye data form me jara hai)
+    let[product,setProduct]= useState({productId:"",productName:"",productDescription:"",productPrice:""});
+    
     const submitHandler=(e)=>{
         e.preventDefault();
         addProduct({
@@ -35,25 +39,30 @@ function ProductForm({onAddProduct} ) {
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Product Id</label>
                     <input type="number" className="form-control" id="exampleInputEmail1" 
-                        aria-describedby="emailHelp" name='productId'/>
+                        aria-describedby="emailHelp" name='productId' 
+                        //useState ke object hai ye(bracket ke andar ki key)
+                        value={product.productId}/>
                 </div>
                 {/* Product Name */}
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Product Name</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" 
-                        aria-describedby="emailHelp" name='productName'/>
+                        aria-describedby="emailHelp" name='productName'
+                        value={product.productName}/>
                 </div>
                 {/* Product Description */}
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Product Description</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" 
-                        aria-describedby="emailHelp" name='productDescription'/>
+                        aria-describedby="emailHelp" name='productDescription'
+                        value={product.productDescription}/>
                 </div>
                 {/* Product Price */}
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Product Price</label>
                     <input type="number" className="form-control" id="exampleInputEmail1" 
-                        aria-describedby="emailHelp" name='productPrice'/>
+                        aria-describedby="emailHelp" name='productPrice'
+                        value={product.productPrice}/>
                 </div>
                 {/* Button to submit form */}
                 <button type="submit" className="btn btn-primary" >Submit</button>

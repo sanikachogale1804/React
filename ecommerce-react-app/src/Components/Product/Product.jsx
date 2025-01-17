@@ -46,7 +46,10 @@ function Product() {
           <div class="col">
             {/* Product Form: Start */}
 
-            <ProductForm onAddProduct={refreshProduct}/>
+            <ProductForm onAddProduct={refreshProduct}
+//propery(product form ki)   value(useState ki)
+             selectedProduct={selectedProduct}
+             />
             {/* Product Form : end */}
           </div>
           <div class="col">
@@ -66,6 +69,8 @@ function Product() {
                     product_link={p._links.self.href}
                     //i am sending this function to productItem
                     onSelectProduct={handleSelectProduct}
+                    //productForm ka prop hai
+        
                   />
                 )
               })}
