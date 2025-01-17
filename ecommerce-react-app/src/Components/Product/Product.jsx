@@ -9,6 +9,7 @@ function Product() {
   //yaha pe ek variable leke products usme store karne hai
   let [products, setProducts] = useState([])
   let[searchQuery,setSearchQuery]= useState("");
+  let [selectedProduct,setSelectedProduct]=useState(null);
   //atleast once to vo dhikhe
   //baad me samjo sort kiya to vo vaha pe hi refresh karke dega
   useEffect(() => {
@@ -29,8 +30,14 @@ function Product() {
   }
 
   //to see selected product
-  const handleSelectProduct=(selectedProduct)=>{}
+  const handleSelectProduct=(selectedProduct)=>{
 
+    //procuctItem se jo product mil raha hai vo hum setSelectedProduct ko dere hai(value change karne ke liye)
+    setSelectedProduct(selectedProduct);
+    console.log(selectedProduct);
+  }
+
+  
   return (
     //md-3 matlab par row mujhe kitne dhekhna hai
     <div >

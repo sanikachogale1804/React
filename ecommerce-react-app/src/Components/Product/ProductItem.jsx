@@ -9,7 +9,7 @@ function ProductItem({ productName, productDiscription, productPrice, product_li
     //console.log(link)
     let product = await getProductById(link)  //yaha pe product milega jo update hua hai
     //product.jsx ke through mai ek function call karna chahti hu(matlab aage koi function milega and age mai usko call karungi)
-    //product me argument pass kiya matlab product.jsx me hume product milega
+    //product me argument pass kiya matlab product.jsx me hume product milega(jiske update button pe click kiya)
     onSelectProduct(product);
   }
   return (
