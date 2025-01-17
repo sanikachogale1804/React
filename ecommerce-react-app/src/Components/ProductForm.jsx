@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { addProduct } from '../Services/ProductService'
 import { data } from 'react-router-dom'
 
@@ -29,6 +29,13 @@ function ProductForm({onAddProduct,selectedProduct} ) {
     }
 
     //===============================================
+    //selectedProduct ki value change hori hai to tume kya karna hai ye useeffect mai lhikhenge
+    //update button pe click karne pe selectedProduct milega
+    useEffect(()=>{
+        //selectedProduct ki value change ki to product ki value bhi change hogi(ye setProduct karega)
+        //product ki value vahi kar do jo selected product ki hai
+        setProduct(selectedProduct)
+    },[selectedProduct])
     return (
         //my matlab m:margin y:axis 
         <div className='container border border-primary border-1 p-3 my-3' >
