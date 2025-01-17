@@ -27,6 +27,10 @@ function Product() {
       setProducts(data)
     })
   }
+
+  //to see selected product
+  const handleSelectProduct=(selectedProduct)=>{}
+
   return (
     //md-3 matlab par row mujhe kitne dhekhna hai
     <div >
@@ -53,6 +57,8 @@ function Product() {
                     productDiscription={p.productDiscription}
                     productPrice={p.productPrice}
                     product_link={p._links.self.href}
+                    //i am sending this function to productItem
+                    onSelectProduct={handleSelectProduct}
                   />
                 )
               })}
