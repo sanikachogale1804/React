@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { getProducts } from '../../Services/ProductService'
 import ProductItem from './ProductItem'
 import ProductForm from '../ProductForm'
+import { data } from 'react-router-dom'
 
 function Product() {
   //yaha pe ek variable leke products usme store karne hai
   let [products, setProducts] = useState([])
-
+  let[searchQuery,setSearchQuery]= useState("");
   //atleast once to vo dhikhe
   //baad me samjo sort kiya to vo vaha pe hi refresh karke dega
   useEffect(() => {
@@ -18,6 +19,14 @@ function Product() {
     })
 
   }, [])
+
+  // we are giving function product form ko dere hai to call
+  //to refresh all product when you add product
+  const refreshProduct=()=>{
+    getProducts().then(data=>{
+      setProducts(data)
+    })
+  }
   return (
     //md-3 matlab par row mujhe kitne dhekhna hai
     <div >
@@ -26,7 +35,7 @@ function Product() {
           <div class="col">
             {/* Product Form: Start */}
 
-            <ProductForm />
+            <ProductForm onAddProduct={refreshProduct}/>
             {/* Product Form : end */}
           </div>
           <div class="col">
@@ -43,6 +52,7 @@ function Product() {
                     productName={p.productName}
                     productDiscription={p.productDiscription}
                     productPrice={p.productPrice}
+                    product_link={p._links.self.href}
                   />
                 )
               })}

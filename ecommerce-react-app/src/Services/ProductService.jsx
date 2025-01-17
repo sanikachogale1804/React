@@ -20,3 +20,11 @@ export const addProduct=(product)=>{
         "Content-Type":"application/json"
     },body:JSON.stringify(product)}).then(data=>data.json()).then(data=>data)//object product me store hora hai is liye product ko hi stringfy kardo
 }
+
+//to update products
+export const getProductById=(product_link)=>{
+    // getProductById id nahi de sakti kuynki postman ka Response link hai id nahi
+    return fetch(product_link)
+       .then(data=>data.json())
+       .then(data=>data)
+}

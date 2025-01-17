@@ -3,7 +3,7 @@ import { addProduct } from '../Services/ProductService'
 import { data } from 'react-router-dom'
 
 //onAddProduct prop hai and runtime pe call hoga
-function ProductForm(onAddProduct ) {
+function ProductForm({onAddProduct} ) {
     //function to be called when form will be submited
 
     const submitHandler=(e)=>{

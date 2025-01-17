@@ -1,6 +1,13 @@
 import React from 'react'
+import { getProductById } from '../../Services/ProductService'
 
-function ProductItem({productName,productDiscription,productPrice}) {
+//product_link product.jsx se milegi
+function ProductItem({productName,productDiscription,productPrice,product_link}) {
+  const onSelectUpdate=async (link)=>{
+     //is function deni hai link
+     //console.log(link)
+     let product=await getProductById(link)  //yaha pe product milega jo update hua hai
+  }
   return (
     <div>
       <div className="col">
@@ -9,7 +16,11 @@ function ProductItem({productName,productDiscription,productPrice}) {
           <h5 class="card-title">{productName}</h5>
           <p class="card-text">{productDiscription}</p>
           <p class="card-text">Price: {productPrice}</p>
-          <button className='btn btn-success'>Update</button>
+          {/* update button */}
+          <button className='btn btn-success'
+          onClick={()=>{onSelectUpdate(product_link)}}>
+            Update</button>
+          {/* delete button */}
           <button className='btn btn-danger'>Delete</button>
         </div>
       </div>
