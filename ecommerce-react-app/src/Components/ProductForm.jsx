@@ -34,7 +34,9 @@ function ProductForm({onAddProduct,selectedProduct} ) {
     useEffect(()=>{
         //selectedProduct ki value change ki to product ki value bhi change hogi(ye setProduct karega)
         //product ki value vahi kar do jo selected product ki hai
-        setProduct(selectedProduct)
+        //agar selectedProduct notnull hai tabhi dikhega
+        if(selectedProduct)
+            setProduct(selectedProduct)
     },[selectedProduct])
     return (
         //my matlab m:margin y:axis 
