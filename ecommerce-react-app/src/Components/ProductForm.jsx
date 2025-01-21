@@ -38,6 +38,24 @@ function ProductForm({onAddProduct,selectedProduct} ) {
         if(selectedProduct)
             setProduct(selectedProduct)
     },[selectedProduct])
+
+    //to change control in input box
+    //because we want to contol input box
+    const handleChange=(e)=>{
+        //console.log(e.target);
+        let{name,value}=e.target;
+        //console.log(name+" "+value );
+        //hume previous object dhekhna hai is liye setproduct liya 
+        setProduct((prevProduct)=>{
+
+            console.log(prevProduct);
+            //nayi chije kya chahiye product ke andar vo return karna hai
+            return {...prevProduct,[name]:value};
+        })
+    }
+
+    //===========================================
+
     return (
         //my matlab m:margin y:axis 
         <div className='container border border-primary border-1 p-3 my-3' >
@@ -50,28 +68,28 @@ function ProductForm({onAddProduct,selectedProduct} ) {
                     <input type="number" className="form-control" id="exampleInputEmail1" 
                         aria-describedby="emailHelp" name='productId' 
                         //useState ke object hai ye(bracket ke andar ki key)
-                        value={product.productId}/>
+                        value={product.productId} onChange={handleChange}/>
                 </div>
                 {/* Product Name */}
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Product Name</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" 
                         aria-describedby="emailHelp" name='productName'
-                        value={product.productName}/>
+                        value={product.productName} onChange={handleChange}/>
                 </div>
                 {/* Product Description */}
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Product Description</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" 
                         aria-describedby="emailHelp" name='productDescription'
-                        value={product.productDescription}/>
+                        value={product.productDescription} onChange={handleChange}/>
                 </div>
                 {/* Product Price */}
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Product Price</label>
                     <input type="number" className="form-control" id="exampleInputEmail1" 
                         aria-describedby="emailHelp" name='productPrice'
-                        value={product.productPrice}/>
+                        value={product.productPrice} onChange={handleChange}/>
                 </div>
                 {/* Button to submit form */}
                 <button type="submit" className="btn btn-primary" >Submit</button>
