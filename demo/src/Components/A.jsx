@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import B from './B'
+import E from './E';
 
 //the data which you want to pass the component 
 //context banake dega(createContext)
@@ -14,6 +15,7 @@ function A() {
         {/* kya deta child tak pohchana hai that you can say with the help of value and value me object aayega */}
         <userContext.Provider value={{"username":name,"age":19,"address":"Vidyavihar"}}>
         <B/>
+        <E/>
         </userContext.Provider>
     
     </div>
