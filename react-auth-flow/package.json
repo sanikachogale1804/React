@@ -1,5 +1,5 @@
 {
-  "name": "second_react_app",
+  "name": "react-auth-flow",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +7,7 @@
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4"
   },

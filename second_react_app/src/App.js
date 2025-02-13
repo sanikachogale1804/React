@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import ChangeName from './Components/ChangeName';
-import AreaOfRectangle from './Components/AreaOfRectangle';
-import Header from './Components/Header';
-import ChangeYear from './Components/ChangeYear';
-import EvenOdd from './Components/EvenOdd';
-import AreaOfCircle from './Components/AreaOfCircle';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, RouterProvider, createBrowserRouter } from 'react-router-dom';  // Import Routes instead of Switch
+import Home from './Components/Home';
+
+const routes=createBrowserRouter([
+  {
+    path:"NavigationBar",
+    element:<><Home/></>
+  }
+  
+  ])
 
 function App() {
-  return (
-    <div className="App">
-      <AreaOfCircle/>
-      {/* <EvenOdd/>
-      <ChangeYear/>
-      <Header/> */}
-      <ChangeName/>
-      <AreaOfRectangle/>   
+  return 
+(
+  <div >
+    
+       <RouterProvider router={routes}/>
     </div>
-  );
+)
+ 
 }
 
 export default App;

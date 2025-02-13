@@ -4,6 +4,7 @@ import './App.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Product from './Components/Product/Product';
 import Navbar from './Components/Product/Navbar';
+import SearchComponent from './Components/Product/SearchComponent';
 
 
 //creating routs
@@ -16,6 +17,10 @@ const routes=createBrowserRouter([
 {
   path:"/",
   element:<Navbar/>
+},
+{
+  path:"/searchProducts",
+  element:<><SearchComponent/></>
 }
 
 ])

@@ -28,3 +28,55 @@ export const getProductById=(product_link)=>{
        .then(data=>data.json())
        .then(data=>data)
 }
+
+//updateProduct("products/1",{})
+export const updateProduct=(product_id_link,product)=>{
+
+    return fetch(product_id_link,{
+        method:"PUT",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(product)
+    }).then(data=>data.json().then(data=>data))
+}
+
+export const deleteProduct=(product_id_link)=>{
+    return fetch(product_id_link,{method:"DELETE"})
+    .then(data=>data.json())
+    .then(data=>data)
+}
+
+export const getProductsLowToHigh=()=>{
+    return fetch("http://localhost:8080/products/search/findByOrderByProductPriceAsc")
+       .then(data=>data.json())  
+       .then(data=>data["_embedded"]["products"])
+}
+
+export const getProductsHighToLow=()=>{
+    return fetch("http://localhost:8080/products/search/findByOrderByProductPriceDesc")
+       .then(data=>data.json())  
+       .then(data=>data["_embedded"]["products"])
+}
+
+export const getProductsOrderByProductNameAsc=()=>{
+    return fetch("http://localhost:8080/products/search/findByOrderByProductNameAsc")
+       .then(data=>data.json())  
+       .then(data=>data["_embedded"]["products"])
+}
+
+export const getProductsOrderByProductNameDesc=()=>{
+    return fetch("http://localhost:8080/products/search/findByOrderByProductNameDesc")
+       .then(data=>data.json())  
+       .then(data=>data["_embedded"]["products"])
+}
+
+export const uploadProductImage=(product_link,file)=>{
+    let  formdata=new FormData();
+    formdata.append("productImage",file);
+   
+    return fetch(product_link+"/image",
+    {
+       method:"POST",
+       body:formdata
+    }).then(data=>data.text())
+    .then(data=>data)
+   }

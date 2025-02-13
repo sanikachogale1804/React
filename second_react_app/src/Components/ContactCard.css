@@ -1,0 +1,28 @@
+.contact-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .contact-email,
+  .contact-phone,
+  .contact-address {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  strong {
+    color: #333;
+  }

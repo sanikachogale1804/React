@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Navbar() {
+function Navbar({handleSearchQuery}) {
+    let[searchQuery,setSearchQuery]=useState("");
+
+    const submitHandler=(e)=>{
+        e.preventDefault();
+        setSearchQuery(e.target.searchQuery.value);
+        //iskoe from input box humne diya valu
+        handleSearchQuery(e.target.searchQuery.value);
+        console.log("searchQuery from navbar",searchQuery);
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -11,7 +20,7 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            <li className="nav-item">   
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li className="nav-item">
@@ -32,8 +41,8 @@ function Navbar() {
                                 <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                             </li>
                         </ul>
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <form className="d-flex" onSubmit={submitHandler}>
+                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='searchQuery'/>
                                 <button className="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </div>

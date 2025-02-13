@@ -36,26 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.App {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 20px;
-}
-
-table {
-  width: 80%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  margin: 0 auto;
-}
-
-th, td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-th {
-  background-color: #f4f4f4;
-}
