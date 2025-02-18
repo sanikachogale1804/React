@@ -12,6 +12,7 @@ function UseReducerExample() {
     const submitHandler = (e) => {
         e.preventDefault();
         console.log("data submitted succesfully")
+        console.log(...initialData)
     }
 
     const initialData = { username: "XYZ", age: 18, address: "mumbai" };
@@ -32,7 +33,7 @@ function UseReducerExample() {
     }
     return (
         <div>
-            <form onChange={submitHandler}>
+            <form onSubmit={submitHandler}>
                 <label htmlFor="">Enter Name</label>
                 <input type="text" name="username" id="" value={data.username}
                     onChange={handleName}
