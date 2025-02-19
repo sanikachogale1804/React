@@ -14,22 +14,22 @@ function FormExample2() {
        setData({studentName:e.target.value})
        console.log(data)
     }
-    const initialData={studentId:" ",studentName:" "};
+    const initialData={studentId:"",studentName:""};
     const [data,setData]=useReducer(reduce,{...initialData})
 
     const submitHandler=(e)=>{
         e.preventDefault();
-        console.log("data submitted succesfully")
+        console.log("data submitted succesfully",data)
     }
   return (
     <div>
        <form action="" onSubmit={submitHandler}>
         <label htmlFor="">Student Id</label>
-        <input type="number" name='studentId' 
+        <input type="number" name='studentId' value={data.studentId}
         onChange={handleId}/> 
 
         <label htmlFor="">Student Name</label>
-        <input type="text" name="studentName" id="" 
+        <input type="text" name="studentName" id=""  value={data.studentName}
         onChange={handleName}/>
 
         <input type="submit" />
