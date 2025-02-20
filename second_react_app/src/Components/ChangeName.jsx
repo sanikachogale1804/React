@@ -1,15 +1,14 @@
-import { use, useState } from "react";
+import React, { useState } from 'react'
 
-function ChangeName()
-{
-    let[name,setName]=useState("Sneha");
-    const change=()=>{setName("Sanika")}
-    return(
-        <div>
-            <button onClick={change}>Change Name</button>
-            <p>{name}</p>
-        </div>
-    );
+function ChangeName() {
+    let [name,setName]=useState("Riya")
+  return (
+    <div>
+       <h1>{name}</h1>
+       <p>{name}</p>
+       <button onClick={()=>{setName("Sanika")}}>Change Name</button>
+    </div>
+  )
 }
 
-export default ChangeName;
+export default ChangeName
